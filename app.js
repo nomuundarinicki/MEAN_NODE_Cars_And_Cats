@@ -9,8 +9,8 @@ var server = http.createServer(function (request, response){
             response.end();
         });
     }
-    else if(request.url === './stylesheets/style.css'){
-        fs.readFile('./stylesheets/style.css', 'utf8', function(errors, contents){
+    else if(request.url === '/stylesheets/style.css'){
+        ls.readFile('./stylesheets/style.css', 'utf8', function(errors, contents){
          response.writeHead(200, {'Content-type': 'text/css'});
          response.write(contents);
          response.end();
